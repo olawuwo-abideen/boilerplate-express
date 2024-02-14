@@ -5,15 +5,15 @@ let app = express();
 
 
 
-console.log("Hello World");
+// console.log("Hello World");
 
 
-app.get('/' , function(req, res){
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/views/index.html');
+  });
+  
 
-    res.send("Hello Express")
-})
-
-
+   
 
 
 
