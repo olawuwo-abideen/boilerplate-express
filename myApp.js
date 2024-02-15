@@ -52,7 +52,9 @@ app.get('/', function (req, res) {
   });
 
 
-
+  app.route('/name').get, (function(req, res){
+    res.json({name: `${req.query.first} ${req.query.last}`});
+  });
 
 
 
