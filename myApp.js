@@ -1,5 +1,6 @@
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser')
 
 
 
@@ -17,6 +18,8 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/views/index.html');
   });
   
+
+app.use(bodyParser.urlencoded({extended: false})).
 
 
   app.get('/json', function(req, res){
