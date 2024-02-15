@@ -55,11 +55,14 @@ app.use(bodyParser.urlencoded({extended: false})).
   });
 
 
-  app.route('/name').get, (function(req, res){
+  app.route('/name')
+  .get, (function(req, res){
     res.json({name: `${req.query.first} ${req.query.last}`});
   });
-
-
+  app.route("/name")
+  .post (function(req, res){
+    res.json({name: `${req.body.first} ${req.body.last}`});
+  });
 
 
 
