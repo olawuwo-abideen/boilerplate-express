@@ -33,7 +33,10 @@ app.get('/', function (req, res) {
     res.json(data);
   })
   
-  
+  app.use(function (req, res,  next){
+    console.log(`${req.method} ${req.path} - ${req.ip}`)
+    next();
+  });
 
 
 
